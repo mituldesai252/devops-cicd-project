@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git 'git@github.com:mituldesai252/devops-cicd-project.git'
+              git 'https://github.com/mituldesai252/devops-cicd-project.git'
             }
         }
 
