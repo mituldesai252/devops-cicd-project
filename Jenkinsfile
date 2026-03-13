@@ -15,11 +15,14 @@ pipeline {
             }
         }
 
-        stage('Push Image') {
-            steps {
-                sh 'docker push mituldesai252/devops-project'
-            }
+        stage('Push Image'){
+    steps {
+        withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+            sh 'echo $PASS | docker login -u $USER --password-stdin'
+            sh 'docker push mituldesai252/devops-project'
         }
+    }
+}
 
         stage('Deploy to Kubernetes') {
             steps {
