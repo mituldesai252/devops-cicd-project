@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-              git 'https://github.com/mituldesai252/devops-cicd-project.git'
+                git branch: 'main', url: 'https://github.com/mituldesai252/devops-cicd-project.git'
             }
         }
 
