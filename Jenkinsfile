@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t mituldesai252/devops-project .'
+            sh 'docker build -t mitul11111/devops-project .'
             }
         }
 
