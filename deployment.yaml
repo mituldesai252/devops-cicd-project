@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: devops-app
-        image: mituldesai252/devops-project  
+        image:  image: mitul11111/devops-project
         ports:
         - containerPort: 80
